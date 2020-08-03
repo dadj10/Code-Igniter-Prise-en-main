@@ -1,0 +1,46 @@
+INSERT INTO [Historique_e_pme].[dbo].[LOG_CONNEXION_SAVE] (ID_UT
+      ,CODE_LG_CNX
+      ,ACTION_LG_CNX
+      ,LOG_LG_CNX
+      ,IP
+      ,BROWER
+      ,SYSTEM
+      ,DATE_INSERT_LG_CNX
+      ,DATE_MODIF_LG_CNX
+      ,ETAT_LG_CNX)
+SELECT ID_UT
+      ,CODE_LG_CNX
+      ,ACTION_LG_CNX
+      ,LOG_LG_CNX
+      ,IP
+      ,BROWER
+      ,SYSTEM
+      ,DATE_INSERT_LG_CNX
+      ,DATE_MODIF_LG_CNX
+      ,ETAT_LG_CNX FROM [e_pme_db_v2].[dbo].[LOG_CONNEXION] ORDER BY ID_LG_CNX ASC
+
+DELETE FROM [e_pme_db_v2].[dbo].[LOG_CONNEXION]
+
+
+
+INSERT INTO [Historique_e_pme].[dbo].[LOG_TRAITEMENT_SAVE] (ID_UT
+      ,CODE_LG_TR
+      ,ACTION_LG_TR
+      ,LOG_LG_TR
+      ,IP
+      ,BROWER
+      ,SYSTEM
+      ,DATE_INSERT_LG_TR)
+SELECT ID_UT
+      ,CODE_LG_TR
+      ,ACTION_LG_TR
+      ,LOG_LG_TR
+      ,IP
+      ,BROWER
+      ,SYSTEM
+      ,DATE_INSERT_LG_TR FROM [e_pme_db_v2].[dbo].[LOG_TRAITEMENT] ORDER BY ID_LG_TR ASC
+
+DELETE FROM [e_pme_db_v2].[dbo].[LOG_TRAITEMENT]
+
+
+
